@@ -1,0 +1,62 @@
+.seo-unfold{
+    display: flex;
+    flex-direction: column;
+}
+
+.seo-unfold-buttons{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    align-items: center;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+}
+
+.seo-unfold:not(.seo-unfold-init) .seo-unfold-buttons,
+.seo-unfold.seo-unfold-init.seo-unfold-closed > .seo-unfold-opened-button,
+.seo-unfold.seo-unfold-init.seo-unfold-opened > .seo-unfold-closed-button {
+    display: none;
+}
+
+.seo-unfold.seo-unfold-init.seo-unfold-closed > .seo-unfold-closed-button{
+    display: flex;
+}
+
+.seo-unfold.seo-unfold-init.seo-unfold-opened > .seo-unfold-opened-button{
+    display: flex;
+}
+
+.seo-unfold-content-wrapper{
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+    position: relative;
+}
+
+.seo-unfold-gradient-mask{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.3s ease !important;
+}
+
+.seo-unfold.seo-unfold-init.seo-unfold-opened .seo-unfold-gradient-mask{
+    height: 0px !important;
+}
+
+.seo-unfold-content{
+    width: 100%;
+}
+
+.seo-unfold-content p:last-child{
+    margin: 0;
+}
+
+.seo-unfold-buttons-icon i, .seo-unfold-buttons-icon svg{
+    width: 1em;
+    height: 1em;
+    position: relative;
+    display: block;
+    fill: currentColor;
+}

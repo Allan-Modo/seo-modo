@@ -1,0 +1,62 @@
+.seo-accordion{
+    display: flex;
+    flex-direction: column;
+}
+
+.seo-accordion-buttons{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    align-items: center;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+}
+
+.seo-accordion:not(.seo-accordion-init) .seo-accordion-buttons,
+.seo-accordion.seo-accordion-init.seo-accordion-closed > .seo-accordion-opened-button,
+.seo-accordion.seo-accordion-init.seo-accordion-opened > .seo-accordion-closed-button {
+    display: none;
+}
+
+.seo-accordion.seo-accordion-init.seo-accordion-closed > .seo-accordion-closed-button{
+    display: flex;
+}
+
+.seo-accordion.seo-accordion-init.seo-accordion-opened > .seo-accordion-opened-button{
+    display: flex;
+}
+
+.seo-accordion-content-wrapper{
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+    position: relative;
+}
+
+.seo-accordion-gradient-mask{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.3s ease !important;
+}
+
+.seo-accordion.seo-accordion-init.seo-accordion-opened .seo-accordion-gradient-mask{
+    height: 0px !important;
+}
+
+.seo-accordion-content{
+    width: 100%;
+}
+
+.seo-accordion-content p:last-child{
+    margin: 0;
+}
+
+.seo-accordion-buttons-icon i, .seo-accordion-buttons-icon svg{
+    width: 1em;
+    height: 1em;
+    position: relative;
+    display: block;
+    fill: currentColor;
+}
