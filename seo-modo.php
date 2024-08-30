@@ -5,7 +5,7 @@
  * Version:     2.0.1
  * Author:      Agence Mōdo
  * Author URI:  https://agence-modo.fr/
- * Text Domain: modo-seo
+ * Text Domain: seo-modo
  */
 
 function register_widgets( $widgets_manager ) {
