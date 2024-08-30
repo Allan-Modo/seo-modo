@@ -20,40 +20,40 @@ function register_widgets( $widgets_manager ) {
 add_action( 'elementor/widgets/register', 'register_widgets' );
 
 
-function modo_seo_enqueue_style_and_script(){
+function seo_modo_enqueue_style_and_script(){
 	//SEO Unfold
-    wp_enqueue_style('seo-unfold-style', plugins_url('modo-seo/assets/css/seo-unfold.css'));
-	wp_enqueue_script('seo-unfold-script', plugins_url('modo-seo/assets/js/seo-unfold.js'), array('jquery'));
+    wp_enqueue_style('seo-unfold-style', plugins_url('seo-modo/assets/css/seo-unfold.css'));
+	wp_enqueue_script('seo-unfold-script', plugins_url('seo-modo/assets/js/seo-unfold.js'), array('jquery'));
 
 	//SEO Accordion
-	wp_enqueue_style('seo-accordion-style', plugins_url('modo-seo/assets/css/seo-accordion.css'));
-	wp_enqueue_script('seo-accordion-script', plugins_url('modo-seo/assets/js/seo-accordion.js'), array('jquery'));
+	wp_enqueue_style('seo-accordion-style', plugins_url('seo-modo/assets/css/seo-accordion.css'));
+	wp_enqueue_script('seo-accordion-script', plugins_url('seo-modo/assets/js/seo-accordion.js'), array('jquery'));
 	
 }
-add_action( 'wp_enqueue_scripts', 'modo_seo_enqueue_style_and_script', 999 );
+add_action( 'wp_enqueue_scripts', 'seo_modo_enqueue_style_and_script', 999 );
 
 
-function modo_seo_enqueue_style_in_editor(){
+function seo_modo_enqueue_style_in_editor(){
 	//SEO Unfold
-	wp_register_style( 'seo-unfold-style', plugins_url('modo-seo/assets/css/seo-unfold.css'));
+	wp_register_style( 'seo-unfold-style', plugins_url('seo-modo/assets/css/seo-unfold.css'));
 	wp_enqueue_style( 'seo-unfold-style' );
 
 	//SEO Accordion
-	wp_register_style( 'seo-accordion-style', plugins_url('modo-seo/assets/css/seo-accordion.css'));
+	wp_register_style( 'seo-accordion-style', plugins_url('seo-modo/assets/css/seo-accordion.css'));
 	wp_enqueue_style( 'seo-accordion-style' );
 }
-add_action( 'elementor/editor/after_enqueue_styles', 'modo_seo_enqueue_style_in_editor');
-add_action( 'elementor/editor/after_enqueue_styles', 'modo_seo_enqueue_style_in_editor');
+add_action( 'elementor/editor/after_enqueue_styles', 'seo_modo_enqueue_style_in_editor');
+add_action( 'elementor/editor/after_enqueue_styles', 'seo_modo_enqueue_style_in_editor');
 
 
-function modo_seo_enqueue_script_in_editor(){
+function seo_modo_enqueue_script_in_editor(){
 	//SEO Unfold
-	wp_register_script( 'seo-unfold-script', plugins_url('modo-seo/assets/js/seo-unfold.js'), array('jquery') );
+	wp_register_script( 'seo-unfold-script', plugins_url('seo-modo/assets/js/seo-unfold.js'), array('jquery') );
 	wp_enqueue_script( 'seo-unfold-script' );
 
 	//SEO Accordion
-	wp_register_script( 'seo-accordion-script', plugins_url('modo-seo/assets/js/seo-accordion.js'), array('jquery') );
+	wp_register_script( 'seo-accordion-script', plugins_url('seo-modo/assets/js/seo-accordion.js'), array('jquery') );
 	wp_enqueue_script( 'seo-accordion-script' );
 }
-add_action( 'elementor/editor/after_enqueue_scripts', 'modo_seo_enqueue_script_in_editor');
-add_action( 'elementor/editor/after_enqueue_scripts', 'modo_seo_enqueue_script_in_editor');
+add_action( 'elementor/editor/after_enqueue_scripts', 'seo_modo_enqueue_script_in_editor');
+add_action( 'elementor/editor/after_enqueue_scripts', 'seo_modo_enqueue_script_in_editor');
