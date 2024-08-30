@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Modo SEO
  * Description: Ajout de divers widgets compatibles SEO
- * Version:     2.0.à
+ * Version:     2.0.1
  * Author:      Agence Mōdo
  * Author URI:  https://agence-modo.fr/
  * Text Domain: modo-seo
